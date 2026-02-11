@@ -94,7 +94,7 @@ export const loginService = async (email, password) => {
       id: user._id,
       role: user.role
     },
-    process.env.JWT_SECRET,
+    process.env.JWT_SECRET || hellohello,
     { expiresIn: "1h" }
   );
 
